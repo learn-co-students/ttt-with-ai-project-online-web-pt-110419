@@ -1,4 +1,4 @@
-=begin require 'spec_helper'
+ require 'spec_helper'
 
 describe "Board" do
   let(:board){Board.new}
@@ -35,7 +35,7 @@ describe "Board" do
   end
 
   describe '#display' do
-    it 'prints the board' do
+   it 'prints the board' do
       board.cells = ["X", "X", "X", "X", "O", "O", "X", "O", "O"]
 
       output = capture_puts{ board.display }
@@ -60,13 +60,13 @@ describe "Board" do
   end
 
   describe '#position' do
-    it 'takes in user input and returns the value of the board cell' do
-      board.cells = ["O", " ", " ", " ", "X", " ", " ", " ", "X"]
+    #it 'takes in user input and returns the value of the board cell' #do
+     # board.cells = ["O", " ", " ", " ", "X", " ", " ", " ", "X"]
 
-      expect(board.position("1")).to eq("O")
-      expect(board.position("2")).to eq(" ")
-      expect(board.position("5")).to eq("X")
-    end
+      #expect(board.position("1")).to eq("O")
+      #expect(board.position("2")).to eq(" ")
+      #expect(board.position("5")).to eq("X")
+    #end
   end
 
   describe '#full?' do
@@ -74,9 +74,10 @@ describe "Board" do
       board.cells = ["X", "O", "X", "O", "X", "X", "O", "X", "O"]
 
       expect(board.full?).to be_truthy
+    
     end
 
-    it 'returns false for an in-progress game' do
+   it 'returns false for an in-progress game' do
       board.cells = ["X", " ", "X", " ", "X", " ", "O", "O", " "]
 
       expect(board.full?).to be_falsey
@@ -92,8 +93,8 @@ describe "Board" do
   end
 
   describe '#taken?' do
-    it 'returns true if the position is X or O' do
-      board.cells = ["X", " ", " ", " ", " ", " ", " ", " ", "O"]
+   it 'returns true if the position is X or O' do
+     board.cells = ["X", " ", " ", " ", " ", " ", " ", " ", "O"]
 
       expect(board.taken?("1")).to be(true)
       expect(board.taken?("9")).to be(true)
@@ -126,4 +127,3 @@ describe "Board" do
     end
   end
 end
-=end 
