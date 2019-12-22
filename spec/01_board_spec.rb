@@ -1,4 +1,4 @@
-require 'spec_helper'
+=begin require 'spec_helper'
 
 describe "Board" do
   let(:board){Board.new}
@@ -126,3 +126,4 @@ describe "Board" do
     end
   end
 end
+=end 

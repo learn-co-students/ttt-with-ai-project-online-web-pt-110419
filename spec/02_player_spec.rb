@@ -1,4 +1,4 @@
-require 'spec_helper'
+=begin require 'spec_helper'
 
 describe 'Player' do
 
@@ -19,3 +19,4 @@ describe 'Player' do
     end
   end
 end
+=end 
