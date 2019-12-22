@@ -60,13 +60,13 @@ describe "Board" do
   end
 
   describe '#position' do
-    #it 'takes in user input and returns the value of the board cell' #do
+    it 'takes in user input and returns the value of the board cell' do
      # board.cells = ["O", " ", " ", " ", "X", " ", " ", " ", "X"]
 
       #expect(board.position("1")).to eq("O")
       #expect(board.position("2")).to eq(" ")
       #expect(board.position("5")).to eq("X")
-    #end
+    end
   end
 
   describe '#full?' do
@@ -126,4 +126,4 @@ describe "Board" do
       expect(board.position("1")).to eq("X")
     end
   end
-end
+end 
